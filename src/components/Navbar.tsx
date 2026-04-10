@@ -25,8 +25,8 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#f9f7f4]/95 backdrop-blur-md shadow-[0_1px_0_rgba(26,22,20,0.08)] py-3"
-            : "bg-transparent py-6"
+            ? "bg-[#f9f7f4]/97 backdrop-blur-md shadow-[0_1px_0_rgba(26,22,20,0.10)] py-3"
+            : "bg-[rgba(26,22,20,0.55)] backdrop-blur-sm py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between">
@@ -34,16 +34,21 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="GraniGonçalves"
-              className="h-9 w-auto object-contain"
+              className={`h-9 w-auto object-contain transition-all duration-500 ${scrolled ? "" : "brightness-0 invert"}`}
             />
             <div className="flex flex-col leading-tight">
               <span
-                className="font-heading text-base tracking-[0.12em] uppercase"
-                style={{ color: "var(--stone-dark)" }}
+                className={`font-heading text-base tracking-[0.12em] uppercase transition-colors duration-500 ${
+                  scrolled ? "text-[var(--stone-dark)]" : "text-white"
+                }`}
               >
                 GraniGonçalves
               </span>
-              <span className="label" style={{ fontSize: "8px", letterSpacing: "0.22em" }}>
+              <span
+                className={`font-sans text-[8px] tracking-[0.22em] uppercase transition-colors duration-500 ${
+                  scrolled ? "text-[var(--gold)]" : "text-[var(--gold-light)]"
+                }`}
+              >
                 Mármores &amp; Granitos
               </span>
             </div>
@@ -54,8 +59,9 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="font-sans text-[11px] font-400 tracking-[0.18em] uppercase transition-colors duration-200 hover:text-[var(--gold)]"
-                style={{ color: "var(--stone-mid)" }}
+                className={`font-sans text-[11px] tracking-[0.18em] uppercase transition-colors duration-300 hover:text-[var(--gold)] ${
+                  scrolled ? "text-[var(--stone-mid)]" : "text-white/80"
+                }`}
               >
                 {link.name}
               </a>
@@ -65,8 +71,9 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:917305620"
-              className="flex items-center gap-2 font-sans text-[11px] tracking-[0.1em] transition-colors hover:text-[var(--gold)]"
-              style={{ color: "var(--stone-mid)" }}
+              className={`flex items-center gap-2 font-sans text-[11px] tracking-[0.1em] transition-colors hover:text-[var(--gold)] ${
+                scrolled ? "text-[var(--stone-mid)]" : "text-white/70"
+              }`}
             >
               <Phone size={13} />
               917 305 620
@@ -77,7 +84,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="lg:hidden p-2"
+            className={`lg:hidden p-2 transition-colors ${scrolled ? "text-[var(--stone-dark)]" : "text-white"}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menu"
           >
