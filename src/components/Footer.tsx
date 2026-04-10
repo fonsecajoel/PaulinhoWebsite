@@ -4,9 +4,12 @@ export default function Footer() {
       <div className="container mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="mb-8 md:mb-0">
-            <span className="text-lg font-heading tracking-[0.2em] uppercase">
-              GraniGonçalves
-            </span>
+            <div className="flex items-center gap-3">
+              <img src="/logo.jpeg" alt="GraniGonçalves" className="h-10 w-auto object-contain" />
+              <span className="text-lg font-heading tracking-[0.2em] uppercase">
+                GraniGonçalves
+              </span>
+            </div>
             <p className="text-[10px] uppercase tracking-[0.3em] text-black/40 mt-2">
               Santa Catarina / Ulmeiro
             </p>

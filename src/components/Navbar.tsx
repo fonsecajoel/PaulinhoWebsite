@@ -29,11 +29,12 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-8 flex items-center justify-between">
-        <div className="flex flex-col">
+        <a href="#home" className="flex items-center gap-3">
+          <img src="/logo.jpeg" alt="GraniGonçalves" className="h-10 w-auto object-contain" />
           <span className="text-lg font-heading tracking-[0.2em] uppercase">
             GraniGonçalves
           </span>
-        </div>
+        </a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-12">
