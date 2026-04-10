@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="mb-8 md:mb-0">
             <div className="flex items-center gap-3">
-              <img src="/logo.jpeg" alt="GraniGonçalves" className="h-10 w-auto object-contain" />
+              <img src="/logo.png" alt="GraniGonçalves" className="h-10 w-auto object-contain" />
               <span className="text-lg font-heading tracking-[0.2em] uppercase">
                 GraniGonçalves
               </span>
